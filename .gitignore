@@ -1,0 +1,15 @@
+# Compiled binary
+observatory
+
+# SBCL compiled files
+*.fasl
+*.lx64fsl
+
+# Editor backups
+*~
+\#*\#
+.*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
