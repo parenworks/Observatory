@@ -4,6 +4,22 @@
 
 Author: Glenn Thompson
 
+## Screenshot
+
+![Fluxion Observatory Dashboard](images/observatory.png)
+
+The screenshot shows the live Observatory dashboard running in a browser. The dark-themed interface is divided into seven panels:
+
+- **Status Header** — displays the overall system status (Critical), health score (70%), active alert count, SSE connection state, and a live server clock.
+- **Service Monitor** — a table of five simulated services (API Gateway, Worker Pool, Database, SSE Broker, Report Renderer) showing per-service health status, latency, error rate, and Restart/Start action buttons.
+- **Resources** — real-time progress bars for CPU Load, Memory, Queue Depth, Request Rate, and SSE Connections.
+- **Capacity Planner** — editable numeric fields for Incoming req/s, Workers, Target CPU %, with computed values (Req per worker, Recommended workers, Est. queue delay) that update bidirectionally via Lattice propagators.
+- **Alert Thresholds** — a settings form for CPU, Queue, and Latency warning/critical thresholds that take effect immediately.
+- **Activity Feed** — a scrolling event log showing timestamped system events such as service state changes and elevated latency warnings.
+- **Glitch-Free Transaction Demo** — a "Simulate Deployment" button that atomically spikes multiple metrics in a single transaction, demonstrating consistent state updates.
+
+All updates arrive via Server-Sent Events with no page reloads and no client-side JavaScript application code.
+
 ## What is this?
 
 Fluxion Observatory is a locally runnable operations control dashboard that demonstrates every major Fluxion capability — reactive cells, computed cells, bidirectional propagators, glitch-free transactions, server push, DOM morphing, CLOS components, `data-*` actions, sessions, validation, and routing — with zero application JavaScript.
